@@ -14,6 +14,7 @@ import java.io.FileInputStream;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.text.ParseException;
@@ -36,7 +37,9 @@ public class InvoiceListener implements ActionListener, ListSelectionListener {
     private Frame frame;
     private DetailsTableModel dm;
     private NewInvoicepopup invoicePopup;
-    private String path = "C:/Users/lenovo/Documents/NetBeansProjects/InvoiceProject/InvoiceHeader.csv";
+    File headerFile = new File("InvoiceHeader.csv");
+   
+    private String path = headerFile.getAbsolutePath();
 
     public InvoiceListener(Frame frame) {
 
