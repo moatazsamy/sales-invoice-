@@ -1,4 +1,3 @@
-
 package com.invoiceproject.model;
 
 import com.invoiceproject.view.Frame;
@@ -70,4 +69,9 @@ public class InvoiceList extends DefaultTableModel {
         return total;
     }
 
+    public String changeToCSV() {
+
+        return number + "," + Frame.simpleDate.format(date) + "," + customer;
+
+    }
 }

@@ -1,7 +1,8 @@
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\controller\InvoiceListener.java
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\view\NewInvoicepopup.java
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\model\InvoiceLine.java
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\model\DetailsTableModel.java
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\model\ListingTableModel.java
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\model\InvoiceList.java
-C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\mycompany\invoiceproject\view\Frame.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\view\Frame.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\model\InvoiceLine.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\model\DetailsTableModel.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\view\NewInvoiceLine.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\model\ListingTableModel.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\controller\InvoiceListener.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\view\NewInvoicepopup.java
+C:\Users\lenovo\Documents\NetBeansProjects\InvoiceProject\src\main\java\com\invoiceproject\model\InvoiceList.java

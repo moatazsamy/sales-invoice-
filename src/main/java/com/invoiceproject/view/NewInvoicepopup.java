@@ -15,31 +15,12 @@ public class NewInvoicepopup extends JDialog {
     private JButton Okbtn;
     private JButton cancelbtn;
 
-    ///
-    private JLabel itemNameLbl;
-    private JLabel itemPriceLbl;
-    private JLabel itemCountLbl;
-
-    private JTextField itemNameField;
-    private JTextField itemPriceField;
-    private JTextField itemCountField;
-
     public NewInvoicepopup(Frame frame) {
 
         customerNameLbl = new JLabel("Customer Name");
         customerName = new JTextField(20);
         dateLbl = new JLabel("Inovice Date ");
         date = new JTextField(10);
-
-        //////
-        itemNameLbl = new JLabel("Item Name");
-
-        itemPriceLbl = new JLabel("Item Price");
-
-        itemCountLbl = new JLabel("Item Count");
-        itemNameField = new JTextField(20);
-        itemCountField = new JTextField(20);
-        itemPriceField = new JTextField(20);
 
         Okbtn = new JButton("ok");
         cancelbtn = new JButton("Cancel");
@@ -50,19 +31,12 @@ public class NewInvoicepopup extends JDialog {
         Okbtn.addActionListener(frame.getListener());
         cancelbtn.addActionListener(frame.getListener());
 
-        setLayout(new GridLayout(6, 2));
+        setLayout(new GridLayout(3, 2));
 
         add(customerNameLbl);
         add(customerName);
         add(dateLbl);
         add(date);
-
-        add(itemNameLbl);
-        add(itemNameField);
-        add(itemPriceLbl);
-        add(itemPriceField);
-        add(itemCountLbl);
-        add(itemCountField);
 
         add(Okbtn);
         add(cancelbtn);
@@ -77,18 +51,6 @@ public class NewInvoicepopup extends JDialog {
 
     public JTextField getDate() {
         return date;
-    }
-
-    public JTextField getItemNameField() {
-        return itemNameField;
-    }
-
-    public JTextField getItemPriceField() {
-        return itemPriceField;
-    }
-
-    public JTextField getItemCountField() {
-        return itemCountField;
     }
 
 }

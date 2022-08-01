@@ -7,7 +7,6 @@ package com.invoiceproject.model;
 import java.util.List;
 import javax.swing.table.AbstractTableModel;
 
-
 public class DetailsTableModel extends AbstractTableModel {
 
     private String[] columnNames = {"Item Name", "price", "Count", "Item Total"};

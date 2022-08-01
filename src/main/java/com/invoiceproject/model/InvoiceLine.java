@@ -19,7 +19,7 @@ public class InvoiceLine {
         this.item = item;
         this.price = price;
         this.count = count;
-        this.invoice = this.invoice;
+        this.invoice = invoice;
     }
 
     public String getItem() {
@@ -59,4 +59,9 @@ public class InvoiceLine {
         return getCount() * getPrice();
     }
 
+    public String changeToCSV() {
+
+        return invoice.getNumber() + "," + item + "," + price + "," + count;
+
+    }
 }

@@ -50,8 +50,8 @@ public class Frame extends javax.swing.JFrame {
         addBtn.addActionListener(listener);
         deleteBtn = new javax.swing.JButton();
         deleteBtn.addActionListener(listener);
-        saveBtn = new javax.swing.JButton();
-        saveBtn.addActionListener(listener);
+        createLineBtn = new javax.swing.JButton();
+        createLineBtn.addActionListener(listener);
         cancelBtn = new javax.swing.JButton();
         cancelBtn.addActionListener(listener);
         jMenuBar1 = new javax.swing.JMenuBar();
@@ -75,11 +75,11 @@ public class Frame extends javax.swing.JFrame {
 
         jLabel1.setText("no.");
 
-        jLabel2.setText("customer name ");
+        jLabel2.setText("Customer name ");
 
-        jLabel3.setText("inovice date ");
+        jLabel3.setText("Invoice date ");
 
-        jLabel4.setText("total");
+        jLabel4.setText("Total");
 
         number.setText("jLabel5");
 
@@ -104,11 +104,11 @@ public class Frame extends javax.swing.JFrame {
 
         addBtn.setText("Add Invoice");
 
-        deleteBtn.setText("delete Invoice");
+        deleteBtn.setText("Delete Invoice");
 
-        saveBtn.setText("save");
+        createLineBtn.setText("Create New Line");
 
-        cancelBtn.setText("cancel");
+        cancelBtn.setText("Cancel");
 
         fileMenu.setText("File");
 
@@ -131,39 +131,30 @@ public class Frame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 301, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(18, 18, 18)
-                                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 383, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jLabel2)
+                                .addGap(23, 23, 23)
+                                .addComponent(custName))
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(77, 77, 77)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel4)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(Total))
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addComponent(jLabel3)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                        .addComponent(invDate))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addGroup(layout.createSequentialGroup()
-                                                .addComponent(jLabel2)
-                                                .addGap(40, 40, 40))
-                                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                                .addComponent(jLabel1)
-                                                .addGap(109, 109, 109)))
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                            .addComponent(number)
-                                            .addComponent(custName)))))))
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel3)
+                                    .addComponent(jLabel1)
+                                    .addComponent(jLabel4))
+                                .addGap(44, 44, 44)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(Total)
+                                    .addComponent(invDate)
+                                    .addComponent(number)))))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(19, 19, 19)
                         .addComponent(addBtn)
                         .addGap(85, 85, 85)
                         .addComponent(deleteBtn)
                         .addGap(139, 139, 139)
-                        .addComponent(saveBtn)
+                        .addComponent(createLineBtn)
                         .addGap(77, 77, 77)
                         .addComponent(cancelBtn)))
                 .addContainerGap(267, Short.MAX_VALUE))
@@ -196,7 +187,7 @@ public class Frame extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addBtn)
                     .addComponent(deleteBtn)
-                    .addComponent(saveBtn)
+                    .addComponent(createLineBtn)
                     .addComponent(cancelBtn))
                 .addGap(197, 197, 197))
         );
@@ -249,6 +240,7 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JLabel Total;
     private javax.swing.JButton addBtn;
     private javax.swing.JButton cancelBtn;
+    private javax.swing.JButton createLineBtn;
     private javax.swing.JLabel custName;
     private javax.swing.JButton deleteBtn;
     private javax.swing.JTable detailsTable;
@@ -263,7 +255,6 @@ public class Frame extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JMenuItem loadMenu;
     private javax.swing.JLabel number;
-    private javax.swing.JButton saveBtn;
     private javax.swing.JMenuItem saveMenu;
     // End of variables declaration//GEN-END:variables
 
@@ -276,9 +267,21 @@ public class Frame extends javax.swing.JFrame {
     private ArrayList<InvoiceLine> invoiceLines;
 
     public ArrayList<InvoiceLine> getInvoiceLines() {
+         if (invoiceLines == null) {
+            invoiceLines = new ArrayList<>();
+        }
+      
         return invoiceLines;
     }
-
+    
+    
+    public void setInvoiceLine(ArrayList<InvoiceLine> invline){
+    
+    
+    this.invoiceLines = invline;
+    
+    
+    }
     public ArrayList<InvoiceList> getInvoices() {
 
         if (invoices == null) {
