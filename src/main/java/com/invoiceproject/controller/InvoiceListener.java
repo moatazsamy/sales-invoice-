@@ -12,6 +12,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -52,17 +53,18 @@ public class InvoiceListener implements ActionListener, ListSelectionListener {
             case "Add Invoice":
                 createInvoice();
                 break;
-            case "delete Invoice":
+            case "Delete Invoice":
                 deleteInvoice();
                 break;
 
-            case "create new Line":
+            case "Create New Line":
                 createNewLine();
                 break;
             case "create new line Ok":
                 createNewLineOk();
                 break;
-            case "cancel":
+            case "Delete Line":
+                deleteLine();
                 break;
             case "load":
                 loadData(null, null);
@@ -263,6 +265,17 @@ public class InvoiceListener implements ActionListener, ListSelectionListener {
         if (deletedRow != -1) {
             frame.getInvoices().remove(deletedRow);
             ((ListingTableModel) frame.getInvoicesTable().getModel()).fireTableDataChanged();
+        }
+    }
+
+    private void deleteLine() {
+
+        int deleteLine = frame.getDetailsTable().getSelectedRow();
+        if (deleteLine != -1) {
+            DetailsTableModel detailTable = (DetailsTableModel) frame.getDetailsTable().getModel();
+            detailTable.getDetails().remove(deleteLine);
+            detailTable.fireTableDataChanged();
+
         }
     }
 

@@ -108,7 +108,7 @@ public class Frame extends javax.swing.JFrame {
 
         createLineBtn.setText("Create New Line");
 
-        cancelBtn.setText("Cancel");
+        cancelBtn.setText("Delete Line");
 
         fileMenu.setText("File");
 
@@ -174,9 +174,9 @@ public class Frame extends javax.swing.JFrame {
                             .addComponent(jLabel2)
                             .addComponent(custName))
                         .addGap(18, 18, 18)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(invDate))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(invDate)
+                            .addComponent(jLabel3))
                         .addGap(18, 18, 18)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel4)
